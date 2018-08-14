@@ -1,0 +1,329 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<style>
+		.mdl-layout__drawer-button{
+			padding-top:2.5vh;
+		}
+		.link-menu{
+			padding-left:5vw;
+			padding-top:5vw;
+		}
+		.link-menu a{
+			text-decoration:none;
+			color: grey;
+			text-transform:uppercase;
+		}
+	</style>
+</head>
+<body>
+	<!-- Simple header with fixed tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+				mdl-layout--fixed-tabs">
+	  <header class="mdl-layout__header">
+		<div class="mdl-layout__header-row">
+		  <!-- Title -->
+		  <span class="mdl-layout-title">Kantin</span>
+		</div>
+		<!-- Tabs -->
+		<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+		  <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Profil</a>
+		  <a href="#fixed-tab-2" class="mdl-layout__tab">Konfirmasi</a>
+		  <a href="#fixed-tab-3" class="mdl-layout__tab">Foto</a>
+		  <a href="#fixed-tab-4" class="mdl-layout__tab">Pesan</a>
+		</div>
+	  </header>
+	  <div class="mdl-layout__drawer">
+		<!--<span class="mdl-layout-title">Menu</span>-->
+		<style>
+			.demo-card-wide.mdl-card {
+			  width: 240px;
+			}
+			.demo-card-wide > .mdl-card__title_main {
+				webkit-align-items:center;
+				-ms-flex-align:center;
+				align-items:center;
+				color:white;
+				display:block;
+				display:-webkit-flex;
+				display:-ms-flexbox;
+				display:flex;
+				-webkit-justify-content:stretch;
+				-ms-flex-pack:stretch;
+				justify-content:stretch;
+				line-height:normal;
+				padding:16px;
+				-webkit-perspective-origin:165px 56px;
+				perspective-origin:165px 56px;
+				-webkit-transform-origin:165px 56px;
+				transform-origin:165px 56px;
+				box-sizing:border-box;
+				min-height:20vh;
+			}
+			.demo-card-wide > .md-bg {
+			  background: url('img/bg.jpg') center / cover;
+			}
+			.demo-card-wide > .mdl-card__menu {
+			  color: #fff;
+			}
+			</style>
+
+			<div class="demo-card-wide mdl-card mdl-shadow--2dp height-drawer" style="min-height:20vh!important;">
+			  <div class="mdl-card__title_main md-bg">
+				<h2 class="mdl-card__title-text">Menu</h2>
+			  </div>
+			</div>
+			<div class="link-menu">
+				<a href="add-asset.html">Tambah Asset</a>
+			</div>
+			<div class="link-menu">
+				<a href="tambahadmin.html">Bantuan</a>
+			</div>
+			<div class="link-menu">
+				<a href="login.html">Keluar</a>
+			</div>
+	  </div>	
+	  <main class="mdl-layout__content">
+		<section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+		  <div class="page-content">
+			<style>
+			.demo-card-wide.mdl-card {
+			  width: 512px;
+			}
+			.demo-card-wide > .mdl-card__title {
+			  color: #fff;
+			  height: 176px;
+			}
+			.demo-card-wide > .mdmain-bg {
+			  background: url('img/kantin.jpeg') center / cover;
+			}
+			.demo-card-wide > .mdl-card__menu {
+			  color: #fff;
+			}
+			.red-bg{
+				background-color:#F44336 !important;
+				padding:3px;
+			}
+			</style>
+
+			<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+			  <div class="mdl-card__title mdmain-bg">
+				<h2 class="mdl-card__title-text red-bg">SMA Warga</h2>
+			  </div>
+			</div>
+			<div style="margin-left:20px;margin-right:20px;">
+				  <h6 style="margin:0px;">Nama Penyewa</h6>
+				  <p>Maulana Ichwan Anshory</p>
+				  <h6 style="margin:0px;">Alamat</h6>
+				  <p>Gendol, RT 26, Dukuh, Tangen</p>
+				  <h6 style="margin:0px;">Kontak</h6>
+				  <p>08123456789</p>
+				  <h6 style="margin:0px;">Status Pembayaran</h6>
+				  <span class="new badge" style="background-color:red;float:left;margin-left:0;margin-top:5px;font-size:1em;" data-badge-caption="">Belum membayar</span>
+			  </div>
+			  <div class="fixed-action-btn">
+				  <a href="edit.html" class="btn-floating btn-large red">
+					<i class="large material-icons waves-effect waves-light">mode_edit</i>
+				  </a>
+				</div>
+		  </div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-2">
+		  <div class="page-content">
+				<div class="fixed-action-btn">
+				  <a href="upload.html"class="btn-floating btn-large red">
+					<i class="large material-icons waves-effect waves-light">camera</i>
+				  </a>
+				</div>
+			<!-- Wide card with share menu button -->
+			<style>
+			.demo-card-wide.mdl-card {
+			  width: 512px;
+			}
+			.demo-card-wide > .mdl-card__title {
+			  color: #fff;
+			  height: 176px;
+			}
+			.demo-card-wide > .md0-bg {
+			  background: url('img/gambar_004.png') center / cover;
+			}
+			.demo-card-wide > .mdl-card__menu {
+			  color: #fff;
+			}
+			.red-bg{
+				background-color:#F44336 !important;
+				padding:3px;
+			}
+			</style>
+
+			<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+			  <div class="mdl-card__title md0-bg">
+				<h2 class="mdl-card__title-text red-bg">SMA Warga</h2>
+			  </div>
+			  <div class="mdl-card__supporting-text">
+				Tanggal upload : 29/08/2018
+			  </div>
+			  <div class="mdl-card__actions mdl-card--border">
+				<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+				  Detail
+				</a>
+			  </div>
+			</div>
+			<br/>
+			<!-- Wide card with share menu button -->
+			<style>
+			.demo-card-wide.mdl-card {
+			  width: 512px;
+			}
+			.demo-card-wide > .mdl-card__title {
+			  color: #fff;
+			  height: 176px;
+			}
+			.demo-card-wide > .mdl-bg {
+			  background: url('img/gambar_006.png') center / cover;
+			}
+			.demo-card-wide > .mdl-card__menu {
+			  color: #fff;
+			}
+			.red-bg{
+				background-color:#F44336 !important;
+				padding:3px;
+			}
+			</style>
+
+			<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+			  <div class="mdl-card__title mdl-bg">
+				<h2 class="mdl-card__title-text red-bg">SMA N 1 Surakarta</h2>
+			  </div>
+			  <div class="mdl-card__supporting-text">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Mauris sagittis pellentesque lacus eleifend lacinia...
+			  </div>
+			  <div class="mdl-card__actions mdl-card--border">
+				<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+				  Get Started
+				</a>
+			  </div>
+			</div>
+		  </div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-3">
+		  <div class="page-content">
+				<!-- Image card -->
+				<style>
+				.demo-card-image.mdl-card {
+				  
+				  
+				}
+				.foto0{
+					background: url('img/kantin.jpeg') center / cover;
+				}
+				.demo-card-image > .mdl-card__actions {
+				  height: 52px;
+				  padding: 16px;
+				  background: rgba(0, 0, 0, 0.2);
+				}
+				.demo-card-image__filename {
+				  color: #fff;
+				  font-size: 14px;
+				  font-weight: 500;
+				}
+				.card-biasa{
+					width: 50vw;
+					min-height: 50vw!important;
+				}
+				</style>
+
+				<div class="demo-card-image mdl-card mdl-shadow--2dp card-biasa" style="float:left;">
+				  <div class="mdl-card__title mdl-card--expand foto0"></div>
+				  <div class="mdl-card__actions">
+					<span class="demo-card-image__filename">Foto depan</span>
+				  </div>
+				</div>
+				<style>
+				.demo-card-image.mdl-card {
+				  
+				  
+				}
+				.card-biasa{
+					width: 50vw;
+					min-height: 50vw!important;
+				}
+				.foto1{
+					background: url('img/kantin2.jpg') center / cover;
+				}
+				.demo-card-image > .mdl-card__actions {
+				  height: 52px;
+				  padding: 16px;
+				  background: rgba(0, 0, 0, 0.2);
+				}
+				.demo-card-image__filename {
+				  color: #fff;
+				  font-size: 14px;
+				  font-weight: 500;
+				}
+				</style>
+
+				<div class="demo-card-image mdl-card mdl-shadow--2dp card-biasa" style="float-left;">
+				  <div class="mdl-card__title mdl-card--expand foto1"></div>
+				  <div class="mdl-card__actions">
+					<span class="demo-card-image__filename">Foto Samping</span>
+				  </div>
+				</div>
+				<style>
+				.demo-card-image.mdl-card {
+
+				  
+				  
+				}
+				.card-denah{
+					width: 100vw;
+					min-height: 80vw!important;
+				}
+				.denah{
+					background: url('img/denah.jpg') center / cover;
+				}
+				.demo-card-image > .mdl-card__actions {
+				  height: 52px;
+				  padding: 16px;
+				  background: rgba(0, 0, 0, 0.2);
+				}
+				.demo-card-image__filename {
+				  color: #fff;
+				  font-size: 14px;
+				  font-weight: 500;
+				}
+				</style>
+
+				<div class="demo-card-image mdl-card mdl-shadow--2dp card-denah" style="float-left;">
+				  <div class="mdl-card__title mdl-card--expand denah"></div>
+				  <div class="mdl-card__actions">
+					<span class="demo-card-image__filename">Denah</span>
+				  </div>
+				</div>
+				<div class="fixed-action-btn">
+				  <a href="edit-foto.html" class="btn-floating btn-large red">
+					<i class="large material-icons waves-effect waves-light">mode_edit</i>
+				  </a>
+				</div>
+				
+		  </div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-3">
+		  <div class="page-content">
+		  </div>
+		</section>
+	  </main>
+</div>
+</body>
+</html>
